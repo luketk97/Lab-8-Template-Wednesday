@@ -93,4 +93,15 @@ class CityListTest {
 
         assertEquals(1, cityList.countCities());
     }
+
+    @Test
+    void failedTest(){
+        CityList cityList = mockCityList();
+
+        assertEquals(1, cityList.countCities());
+
+        cityList.add(new City("Regina", "Saskatchewan"));
+
+        assertEquals(3, cityList.countCities());
+    }
 }
